@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+body {
+  font-family: "Plus Jakarta Sans";
+  background: "#FFFEEC";
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+.hide-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.ordertablecontainer thead tr th {
+  background-color: white !important;
+
+  margin-left: 32px !important;
+}
+.orders-details-table thead tr th {
+  background-color: white !important;
+}
+.orders-details-table tbody tr td {
+  background-color: white !important;
+}
+li.ant-menu-submenu-open > div.ant-menu-submenu-title {
+  color: white !important;
+}
+li.ant-menu-submenu-inline > div.ant-menu-submenu-title {
+  color: white !important;
+}
+li > div.ant-menu-submenu-title {
+  color: white !important;
+}
+ul.ant-menu-vertical > li.ant-menu-item-only-child {
+  background-color: #008444;
+  color: white !important;
+}
+.ant-menu-item-selected {
+  color: white !important;
+}
+.team-mgmt-table thead tr th {
+  background-color: white !important;
+}
+.team-mgmt-table tbody tr td {
+  background-color: white !important;
+}
+.customer-mgmt-table thead tr th {
+  background-color: white !important;
+}
+.customer-mgmt-table tbody tr td {
+  background-color: white !important;
+}
+.user-mgmt-table thead tr th {
+  background-color: white !important;
+  /* font-weight: 300 !important; */
+}
+.order-details-table thead tr th {
+  color: #6b6b6b !important;
+  font-size: 14px;
+}
+
+.user-mgmt-table tbody tr td {
+  background-color: white !important;
+}
+.survey-details-table thead tr th {
+  background-color: white !important;
+}
+.survey-details-table tbody tr td {
+  background-color: white !important;
+}
+.survey-trend-chart .apexcharts-toolbar {
+  display: none !important;
+}
+.custom-collapse .ant-collapse-item {
+  border-bottom: none;
+}
+
+.custom-collapse .ant-collapse-header {
+  border-bottom: none;
+}
+
+.custom-collapse .ant-collapse {
+  border: none;
+}
+.selectcolor {
+  background-color: #fafafa !important;
+}
+/* Webkit-based browsers (Chrome, Edge, Safari) ke liye */
+.custom-survey-scrollbar::-webkit-scrollbar {
+  width: 5px; /* Scrollbar ki width */
+  /* height: 8px; Scrollbar ki height (horizontal ke liye agar ho) */
+}
+.custom-survey-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track ka background color */
+  border-radius: 5px; /* Track ke corners rounded */
+}
+
+.custom-survey-scrollbar::-webkit-scrollbar-thumb {
+  background: #a7a5a5; /* Thumb ka color */
+  border-radius: 10px; /* Thumb ke corners rounded */
+}
+
+.custom-survey-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb ka color hover par */
+}
+@media (min-width: 992px) {
+  .ant-modal-mask {
+    background-color: #dad5d5 !important;
+    opacity: 0.02 !important;
+  }
+  .ant-modal .ant-modal-content {
+    /* box-shadow: none !important; Remove completely */
+    /* OR custom shadow */
+    box-shadow: 1px 1px 12px 5px rgb(228, 225, 225) !important;
+  }
+  .addusermodal .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #ff8548 !important;
+    border-color: #ff8548 !important;
+  }
+
+  .edit-profile-add-teams-modal {
+    width: 55% !important;
+  }
+  .Create-users-modal {
+    width: 41% !important;
+  }
+}
+
+.custom-select .ant-picker-input > input::placeholder {
+  color: #6b6b6b;
+}
+.custom-select .ant-select-selector {
+  background-color: #fafafa !important;
+  /* padding-top: 1px;
+  padding-bottom: 1px; */
+  border: 1px solid #ebf0ed !important;
+  border-radius: 10px;
+  height: 40px !important;
+  line-height: 40px !important;
+}
+
+.ant-picker {
+  background-color: #fafafa !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  border: 1px solid #ebf0ed !important;
+  border-radius: 10px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+}
+.custom-spinner .ant-spin-dot-holder .ant-spin-dot {
+  color: white !important;
+}
+.order-details-table {
+}
+
+.activity-type-field {
+  transition: background-color 0.3s ease;
+}
+
+.activity-type-field:hover {
+  background-color: transparent; /* Remove background on hover */
+}
+
+.ant-table-thead th {
+  background: white !important;
+  font-weight: 600;
+}
+
+.ant-btn-primary {
+  background-color: #1677ff;
+}
+
+.ant-tag-success {
+  color: #389e0d;
+  background: #f6ffed;
+  border-color: #b7eb8f;
+}
+
+.ant-tag-error {
+  color: #cf1322;
+  background: #fff1f0;
+  border-color: #ffa39e;
+}
+
+.ant-card {
+  box-shadow: none;
+}
+.buttons-secondary {
+  width: 179px;
+  height: 50px;
+  border-radius: 10px;
+  color: #008444;
+  font-family: "Manrope", serif;
+  background: #ebf0ed;
+}
+.buttons-primary {
+  width: 179px;
+  border-radius: 10px;
+  height: 50px;
+  font-family: "Manrope", serif;
+  background: #ff8548;
+}
+
+.button-small-primary {
+  width: 139px;
+  border-radius: 10px;
+  height: 40px;
+  font-family: "Manrope", serif;
+  background: #ff8548;
+  color: white;
+}
+
+.button-small-secondary {
+  width: 139px;
+  height: 40px;
+  border-radius: 10px;
+  color: #008444;
+  font-family: "Manrope", serif;
+  background: #ebf0ed;
+}
+
+.ant-pagination {
+  margin-top: 16px;
+}
+
+.ant-checkbox-wrapper {
+  margin-left: 0 !important;
+}
+
+.ant-table-selection-column {
+  width: 48px;
+}
+
+/* .custom-pagination .ant-pagination-item-active {
+  background-color: #ff8548 !important;
+  border-color: #ff8548 !important;
+}
+
+.custom-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+
+.custom-pagination {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100%;
+} */
+
+.custom-pagination .ant-pagination-total-text {
+  flex-grow: 1; /* Pushes it to the left */
+  text-align: left; /* Aligns text to the left */
+}
+
+.custom-pagination .ant-pagination {
+  flex-grow: 1; /* Pushes it to the right */
+  text-align: right; /* Aligns pagination to the right */
+}
+.dateselected {
+  background-color: white !important;
+}
+/* .custom-bordered-table tbody tr td:nth-child(2) { */
+/* border-left: 1px solid #b6b3b3 !important; /* light gray like AntD */
+
+/* border-right: 1px solid #b6b3b3 !important; light gray like AntD */
+
+/* border-right: 1px solid #ffffff !important; light gray like AntD */
+/* } */
+
+/* .custom-checkbox {
+  cursor: not-allowed !important;
+} */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
